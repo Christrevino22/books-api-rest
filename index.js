@@ -7,14 +7,14 @@ const pool = require("./SQL/connection");
 const PORT = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
-  res.send("Hello, World!!!");
+  res.json("Hello, World!!!");
 });
 app.use(bodyParser.json());
 
 app.get("/books", (req, res) => {
   pool.query("SELECT * FROM books", (err, rows) => {
     if (err) throw new Error(err);
-    return res.send(rows);
+    return res.json(rows);
   });
 });
 app.listen(PORT, console.log("APP LISTENING FROM", PORT));
