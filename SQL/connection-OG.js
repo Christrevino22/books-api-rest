@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 require("dotenv").config();
-
+//ME AND MATT WENT THRU THIS AND I BEILIEVE WE ONLY HAD A TYPING ISSUE WHICH WE RESOLVED
 console.log("this is here", process.env.DB_HOST);
 class Connection {
   constructor() {
